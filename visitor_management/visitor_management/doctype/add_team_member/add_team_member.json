@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{email}",
+ "creation": "2023-10-09 13:26:38.907271",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "column_break_5ijbi",
+  "last_name",
+  "section_break_gyvlp",
+  "email",
+  "column_break_jlhj1",
+  "mobile",
+  "section_break_pc3ah",
+  "role",
+  "designation",
+  "column_break_62np4",
+  "company",
+  "section_break_xvsa0",
+  "password",
+  "column_break_ygpud",
+  "confirm_password",
+  "amended_from",
+  "member_user_permission",
+  "member_user"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "Role Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Event Designation"
+  },
+  {
+   "fieldname": "column_break_5ijbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gyvlp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "confirm_password",
+   "fieldtype": "Data",
+   "label": "Confirm Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jlhj1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pc3ah",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_xvsa0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ygpud",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_62np4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Add Team Member",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "member_user_permission",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "member user permission"
+  },
+  {
+   "fieldname": "member_user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "member user"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-02 14:34:33.856285",
+ "modified_by": "Administrator",
+ "module": "Visitor Management",
+ "name": "Add Team Member",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Gift.###",
+ "creation": "2023-11-28 13:20:27.292526",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "tlc_member",
+  "email",
+  "whatsapp_mobile_number",
+  "gift_flag",
+  "tlc_level"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tlc_member",
+   "fieldtype": "Select",
+   "label": "TLC Member",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "whatsapp_mobile_number",
+   "fieldtype": "Data",
+   "label": "Whatsapp Mobile Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "gift_flag",
+   "fieldtype": "Int",
+   "label": "Gift Flag"
+  },
+  {
+   "fieldname": "tlc_level",
+   "fieldtype": "Select",
+   "label": "TLC Level",
+   "options": "Micro\nLC"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-02 14:41:38.638163",
+ "modified_by": "Administrator",
+ "module": "Visitor Management",
+ "name": "TLC Gift Information",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

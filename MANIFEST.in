@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include visitor_management *.css
+recursive-include visitor_management *.csv
+recursive-include visitor_management *.html
+recursive-include visitor_management *.ico
+recursive-include visitor_management *.js
+recursive-include visitor_management *.json
+recursive-include visitor_management *.md
+recursive-include visitor_management *.png
+recursive-include visitor_management *.py
+recursive-include visitor_management *.svg
+recursive-include visitor_management *.txt
+recursive-exclude visitor_management *.pyc

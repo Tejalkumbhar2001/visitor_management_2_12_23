@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "autoname": "format:{date}-{first_name}-{###}",
+ "creation": "2023-10-06 11:47:03.733359",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_svton",
+  "column_break_kabkq",
+  "company_name",
+  "section_break_smkd6",
+  "first_name",
+  "column_break_dym3i",
+  "age",
+  "address_section",
+  "village",
+  "taluka",
+  "district",
+  "column_break_sq6yf",
+  "pincode",
+  "state",
+  "country",
+  "section_break_2jxiq",
+  "whatsapp_no",
+  "email",
+  "column_break_5h65s",
+  "different",
+  "contact",
+  "section_break_qj3bv",
+  "company",
+  "column_break_xd6h1",
+  "designation",
+  "section_break_sh55d",
+  "product",
+  "feedback_section",
+  "feedback",
+  "date",
+  "event"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "depends_on": "eval:doc.different ==1",
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact Number",
+   "length": 10
+  },
+  {
+   "fieldname": "whatsapp_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WhatsApp No.",
+   "length": 10,
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Visitor's Company"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Event Designation"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Table",
+   "label": "Product",
+   "options": "Child Product"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Text",
+   "label": "Feedback",
+   "max_height": "5rem",
+   "width": "5"
+  },
+  {
+   "fieldname": "section_break_qj3bv",
+   "fieldtype": "Section Break",
+   "label": "Professional Details"
+  },
+  {
+   "fieldname": "section_break_smkd6",
+   "fieldtype": "Section Break",
+   "label": "Personal Info"
+  },
+  {
+   "fieldname": "section_break_2jxiq",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "feedback_section",
+   "fieldtype": "Section Break",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fetch_from": "village.taluka",
+   "fieldname": "taluka",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fetch_from": "village.district",
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "Address Line 3"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "length": 6
+  },
+  {
+   "default": "Maharashtra",
+   "fetch_from": "village.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "column_break_sq6yf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date"
+  },
+  {
+   "default": "India",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "column_break_dym3i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5h65s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "different",
+   "fieldtype": "Check",
+   "label": "Is Contact number and WhatsApp number are different ?"
+  },
+  {
+   "fieldname": "column_break_svton",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kabkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xd6h1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_sh55d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "label": "Event",
+   "options": "Events"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-02 14:34:52.628236",
+ "modified_by": "Administrator",
+ "module": "Visitor Management",
+ "name": "Visitor Information",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

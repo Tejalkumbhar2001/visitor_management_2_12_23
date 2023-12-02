@@ -1,0 +1,256 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{email}",
+ "creation": "2023-11-23 17:13:17.160984",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "column_break_goyc1",
+  "last_name",
+  "column_break_khlsb",
+  "email",
+  "column_break_gvuln",
+  "mobile",
+  "section_break_n65mj",
+  "currency",
+  "column_break_d1mw3",
+  "country",
+  "section_break_g2xwi",
+  "column_break_raamh",
+  "company_nameas_per_your_gst",
+  "column_break_il6ux",
+  "select_one",
+  "gst",
+  "pan",
+  "section_break_v5wlz",
+  "password",
+  "column_break_hqeg0",
+  "confirm_password",
+  "amended_from",
+  "doc_company",
+  "doc_user",
+  "doc_user_permission",
+  "company_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "column_break_goyc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "column_break_khlsb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_gvuln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_n65mj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "INR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_d1mw3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "india",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "section_break_g2xwi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_raamh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_nameas_per_your_gst",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name(As per your GST))",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_il6ux",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_one",
+   "fieldtype": "Select",
+   "label": "Select One",
+   "options": "GST\nPAN",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.select_one==\"GST\"",
+   "fieldname": "gst",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "GST",
+   "length": 15,
+   "mandatory_depends_on": "eval:doc.select_one==\"GST\"",
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:doc.select_one==\"PAN\"",
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN",
+   "length": 10,
+   "mandatory_depends_on": "eval:doc.select_one==\"PAN\"",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_v5wlz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hqeg0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confirm_password",
+   "fieldtype": "Data",
+   "label": "Confirm Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Company Registration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "doc_company",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "doc company"
+  },
+  {
+   "fieldname": "doc_user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "doc user"
+  },
+  {
+   "fieldname": "doc_user_permission",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "doc user permission"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Company Registration",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-02 14:42:49.323616",
+ "modified_by": "Administrator",
+ "module": "Visitor Management",
+ "name": "Company Registration",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Visitor Administrator",
+   "share": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "web user",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
